@@ -27,31 +27,30 @@ x1 = 0
 y1 = 0
 s = int(input("Введите сумму искомых чисел, сумма - "))
 p = int(input("Введите произведение искомых чисел, произведение - "))
-for x1 in range(1, 10):
-    for y1 in range(1, 10):
+for x1 in range(1, 1000):
+    for y1 in range(1, 1000):
         if (s == x1 + y1) and (p == x1 * y1):
             print(f"первое число = {x1} , второе число = {y1}")
 
-# summ = x + y
-# product = x * y
-# print(f"сумма иском ых чисел - {sum}, произведение - {product}")
-"""d = s*s - 4 *s*(-1)
+# " способ - решение с использованием квадратного уравнения
+d = s**2 - 4 *(-p)*(-1)
 print ("d = ", d)
-x1 = (-s + round(math.sqrt(d))) / (2 * (-1))
-x2 = (-s - round(math.sqrt(d))) / (2 * (-1))
+x3 = (-s + round(math.sqrt(d))) / (2 * (-1))
+x4 = (-s - round(math.sqrt(d))) / (2 * (-1))
 
-print(f"x1 = {x1}")
-print(f"x2 = {x2}")if (x1 > 0): 
+print(f"x3 = {x3}")
+print(f"x4 = {x4}")
+'''if (x1 > 0): 
     if(y + x1 == s and y * x1 == p):
        print(f"X =  {x1} , Y = {y}")
 elif (x2 > 0) :
     if (y + x2 == s and y * x2 == p):
     # y = summ - x2
-        print(f"X =  {x2} , Y = {y}")"""
+        print(f"X =  {x2} , Y = {y}")'''
 
 """Задача 14: Требуется вывести все целые степени двойки (т.е. числа вида 2k), не превосходящие числа N."""
 n = int(input("Введите число N - "))
-for i in range (1, n):
+for i in range(1, n):
     digit = 2**i
     if digit <= n:
         print(digit)
